@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
     rclcpp::init(argc, argv);
     auto node = std::make_shared<rclcpp::Node>("node_pub1_3"); //노드명
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
-    auto mypub = node->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", qos_profile); //토픽명, 
+    auto mypub = node->create_publisher<geometry_msgs::msg::Twist>("/turtle1/cmd_vel", qos_profile); //토픽명, QoS 설정 변수
  
     geometry_msgs::msg::Twist message;
  
