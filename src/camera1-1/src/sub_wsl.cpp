@@ -8,7 +8,7 @@ using std::placeholders::_1;
   
 void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg)
 {
-    cv::Mat frame = cv::imdecode(cv::Mat(msg->data),  cv::IMREAD_COLOR);
+    cv::Mat frame = cv::imdecode(cv::Mat(msg->data), cv::IMREAD_COLOR);
     cv::Mat gray, binary;
     cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
     cv::threshold(gray, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
