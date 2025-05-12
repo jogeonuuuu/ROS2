@@ -6,7 +6,8 @@
 #include <iostream>
 using std::placeholders::_1;
 
-std::string dst = "appsrc ! videoconvert ! video/x-raw, format=BGRx ! \
+//Format: BGRx, GRAY8
+std::string dst = "appsrc ! videoconvert ! video/x-raw, format=BGRx ! \ 
 	nvvidconv ! nvv4l2h264enc insert-sps-pps=true ! \
 	h264parse ! rtph264pay pt=96 ! \
 	udpsink host = 203.234.58.162 port = 9011 sync=false";
@@ -19,6 +20,7 @@ void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::Compre
     cv::Mat gray, binary;
     cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
     cv::threshold(gray, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
+    cv::cvtColor(binary, binary_bgr, cv::COLOR_GRAY2BGR); 
   
     writer << binary;
     RCLCPP_INFO(node->get_logger(), "Received Image : %s,%d,%d", msg->format.c_str(),frame.rows,frame.cols);
