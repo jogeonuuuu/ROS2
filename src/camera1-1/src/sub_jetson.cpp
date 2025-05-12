@@ -14,7 +14,7 @@ std::string dst = "appsrc ! videoconvert ! video/x-raw, format=BGRx ! \
 
 cv::VideoWriter writer;
         
-void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg)
+void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg) //, cv::VideoWriter& writer
 {
     cv::Mat frame = cv::imdecode(cv::Mat(msg->data),  cv::IMREAD_COLOR);
     cv::Mat gray, binary;
@@ -30,11 +30,12 @@ int main(int argc, char* argv[])
     rclcpp::init(argc, argv);
     auto node = std::make_shared<rclcpp::Node>("camsub");
 
+    //cv::VideoWriter writer;
     writer.open(dst, 0, (double)30, cv::Size(640, 360), false);
     if(!writer.isOpened()) { RCLCPP_ERROR(node->get_logger(), "Writer open failed!"); rclcpp::shutdown(); return -1; }
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
-    fn = std::bind(mysub_callback, node, _1);
+    fn = std::bind(mysub_callback, node, _1); //, writer
     auto mysub = node->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed",qos_profile,fn);
     rclcpp::spin(node);
     rclcpp::shutdown();
