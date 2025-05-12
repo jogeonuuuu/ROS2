@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
  
     int fourcc = cv::VideoWriter::fourcc('m', 'p', '4', 'v'); //'D', 'I', 'V', 'X'
     double fps = 30;
-    cv::VideoWriter outputVideo("camera1-3.mp4", fourcc, fps, cv::Size(640, 360));
+    cv::VideoWriter outputVideo("camera1-2.mp4", fourcc, fps, cv::Size(640, 360));
  
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
     fn = std::bind(mysub_callback, node, _1, outputVideo);
