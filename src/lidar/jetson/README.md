@@ -1,7 +1,7 @@
 [slamtec lidar ros2](https://github.com/Slamtec/sllidar_ros2)    
 [code used](https://github.com/Slamtec/sllidar_ros2/blob/main/src/sllidar_node.cpp)
 
-- **Lidar Model:** RPLIDAR [C1](https://github.com/Slamtec/sllidar_ros2/blob/main/launch/sllidar_c1_launch.py)
+- **Lidar Model:** [RPLIDAR C1](https://github.com/Slamtec/sllidar_ros2/blob/main/launch/sllidar_c1_launch.py)
 ```
 // sllidar_node.cpp (line 69~80)
 this->declare_parameter<std::string>("channel_type","serial");
