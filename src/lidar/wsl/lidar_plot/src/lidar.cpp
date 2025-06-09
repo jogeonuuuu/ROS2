@@ -13,11 +13,12 @@ void lidar::scanCb(sensor_msgs::msg::LaserScan::SharedPtr scan) {
         float degree = RAD2DEG(scan->angle_min + scan->angle_increment * i); //RAD2DEG(x) (x * 180./M_PI)
         float distance = scan->ranges[i];
         printf("[SLLIDAR INFO]: angle-distance : [%f, %f]\n", degree, distance);
-        
-        // 스캔영상 그리기 (500pxl x 500pxl / 10m x 10m)
+
+        // 스캔영상 그리기 (500pxl x 500pxl / 10m x 10m) (-> 1m 당 50pxl)
         float rad = DEG2RAD(degree); //DEG2RAD(x) (x * M_PI/180.)
-        int xpixel = 250 + (sin(rad) * distance*20); //20m 단위 ( If(degree==60) sin(rad)=-1 ) => xpixel=250-20=230
-        int ypixel = 250 + (cos(rad) * distance*20);
+        float meter = 1; float radius = MET2PXL(meter); // 반경
+        int xpixel = 250 + (sin(rad) * distance * radius); //20m 단위 ( If(degree==30) sin(rad)=1/2 ) => xpixel≒250+x 
+        int ypixel = 250 + (cos(rad) * distance * radius);
         cv::rectangle(lidar_img, cv::Rect(xpixel, ypixel, 3, 3), cv::Scalar(0,0,255), -1); // lidar 기준 (x축: 세로방향, y축: 가로방향)
     }
     // 스캔영상 화면출력 및 동영상 저장
