@@ -11,8 +11,8 @@
 
 
 
-**4. 메시지 1개당 몇 개의 거리 측정값이 포함되어 있는가?** && **5. 1회전에 몇 번 거리를 측정하는가?**
-![image](https://github.com/user-attachments/assets/4db10f2b-efbf-40a3-a9c9-fc678b0ed5a1)
+**4. 메시지 1개당 몇 개의 거리 측정값이 포함되어 있는가?** && **5. 1회전에 몇 번 거리를 측정하는가?**    
+![image](https://github.com/user-attachments/assets/4db10f2b-efbf-40a3-a9c9-fc678b0ed5a1)   
 
 
 
