@@ -7,7 +7,8 @@
 //#include <memory>
 #define RAD2DEG(x) ((x)*(180./M_PI))
 #define DEG2RAD(x) ((x)*(M_PI/180.))
- 
+#define MET2PXL(x) ((x)*50.) //500(pixel)이 10m로 가정했을 때 1미터당 50pixel로 변경
+
 using std::placeholders::_1;
  
 class lidar : public rclcpp::Node 
