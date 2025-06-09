@@ -1,1 +1,2 @@
-<img src="https://github.com/user-attachments/assets/01fbab82-8469-423a-a2a2-0958359e1f40" width="70%" height="70%">
+- 키보드로부터 실수값 3개를 입력 받아 퍼블리시하는 패키지
+- **Interface(topic massege):** geometry_msgs/msg/Vector3 (헤더파일명, 클래스명)
