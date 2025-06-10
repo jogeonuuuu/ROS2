@@ -1,1 +1,2 @@
-![Uploading image.png…]()
+- 키보드로부터 실수값 3개를 입력 받아 퍼블리시하는 패키지
+- **Interface(topic massege):** geometry_msgs/msg/Vector3 (헤더파일명, 클래스명)
