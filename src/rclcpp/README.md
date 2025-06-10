@@ -1,3 +1,7 @@
+## 개발 환경: WSL2 Ubuntu20.04 (with ROS2 Foxy ver.)
+
+<br/>
+
 |**<Node 객체 생성 및 Publiser 객체 생성>**|**<추가로 Subscription 객체 생성 후 통신 테스트>**|**<분할 컴파일>**|
 |:---:|:---:|:---:|
 |[rclcpp-1](https://github.com/jogeonuuuu/ROS2/tree/main/src/rclcpp/rclcpp-1): ``loop_rate(), loop_rate.sleep()`` ``sleep_for()`` </br>[rclcpp-2](https://github.com/jogeonuuuu/ROS2/tree/main/src/rclcpp/rclcpp-2): ``rclcpp::Node::create_wall_timer()``|[rclcpp-3](https://github.com/jogeonuuuu/ROS2/tree/main/src/rclcpp/rclcpp-3)|[rclcpp](https://github.com/jogeonuuuu/ROS2/tree/main/src/rclcpp/rclcpp-4)
