@@ -1,3 +1,12 @@
+```
+rclcpp-1 vs rclcpp-2
+
+공통점: Publishing Packages
+차이점: Pub 반복 주기 설정 함수
+       rclcpp-1: [loop_rate(), loop_rate.sleep()], sleep_for()
+       rclcpp-2: rclcpp::Node::create_wall_timer()
+```
+
 > **pub1-1**
 > - 정수값을 0으로 초기화하고 1씩 증가시키면서 퍼블리시하는 패키지
 > - Interface(topic massege): std_msgs/msg/Int32 (헤더파일명, 클래스명)
