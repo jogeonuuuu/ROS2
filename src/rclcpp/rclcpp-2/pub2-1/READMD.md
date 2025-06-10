@@ -1,1 +1,2 @@
-![image](https://github.com/user-attachments/assets/a842b1dd-d4c1-4f17-a9d0-a7d1b897f9e6)
+- 정수값을 0으로 초기화하고 1씩 증가시키면서 퍼블리시하는 패키지
+- **Interface(topic massege):** std_msgs/msg/Int32 (헤더파일명, 클래스명)
