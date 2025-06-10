@@ -1,1 +1,5 @@
-![image](https://github.com/user-attachments/assets/7b73b2c8-695b-4582-a90b-e3f97b630175)
+- Turtlesim 패키지의 ``teleop_turtle 노드``를 대신하는 패키지
+  - Turtlesim 패키지의 turtle-teleop_key 실행파일에 지정된 노드
+- 키보드 입력시 ``/turtle1/cmd_vel`` 토픽 발행
+  - Subscriber 역할을 수행하는 Turtlesim 패키지의 turtle-teleop_key 실행파일을 수행했을 때 발행되는 토픽
+- **Interface(topic massege):** geometry_msgs/msg/Twist (헤더파일명, 클래스명)
