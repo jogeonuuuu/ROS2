@@ -57,10 +57,9 @@
 <br/><br/>
 
 
-[ROS2 foxy Document](https://docs.ros.org/en/foxy/index.html)   
-[rclcpp](https://docs.ros2.org/foxy/api/rclcpp/index.html)
+[ROS2 foxy Document](https://docs.ros.org/en/foxy/index.html) / [rclcpp](https://docs.ros2.org/foxy/api/rclcpp/index.html)
 
-
+**Message Interface**   
 소스코드에서 *message interface headerfile*은 별도 포함해야 됨. (ex: `#include "std_msgs/msg/string.hpp“`)   
 **설치 경로:** /opt/ros/foxy/(std_msgs, geometry_msgs, sensor_msgs)/msg/*.hpp
 
