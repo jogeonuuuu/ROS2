@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
     {
         cap >> frame;
         if (frame.empty()) { RCLCPP_ERROR(node->get_logger(), "frame empty"); break;}
-        msg = cv_bridge::CvImage(hdr, "bgr8", frame).toCompressedImageMsg();
+        msg = cv_bridge::CvImage(hdr, "bgr8", frame).toCompressedImageMsg(); //default format = JPG
         mypub->publish(*msg); //msg는 객체 => std::shared_ptr<sensor_msgs::msg::CompressedImage>
         loop_rate.sleep();
     }
