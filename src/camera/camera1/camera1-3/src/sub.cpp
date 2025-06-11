@@ -1,6 +1,6 @@
 #include "camera1-3/sub.hpp"
  
-Sub::Sub() : Node("camsub_wsl"), output("camera1-4.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 360))
+Sub::Sub() : Node("camsub_wsl"), output("camera1-3.mp4", cv::VideoWriter::fourcc('m', 'p', '4', 'v'), 30, cv::Size(640, 360))
 {
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     sub_ = this->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed", qos_profile,
