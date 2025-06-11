@@ -7,7 +7,7 @@
   - **Topic name:** image/compressed
   - **Interface(topic message):** sensor_msgs::msg::CompressedImage
     - ``cv_bridge::CvImage::toCompressedImageMsg()``   
-      -> cv::Mat 객체를 sensor_msgs::msg::CompressedImage 객체로 변환시켜주는 함수
+      -> cv::Mat 객체를 sensor_msgs::msg::CompressedImage 객체로 변환시켜주는 함수 (기본 압축 포맷: jpg)
   - **프로토콜:** UDP (영상 통신시 속도가 중요하므로 Qos설정에서 best effort 모드(UDP) 사용)
   - **반복 주기**
     - 40Hz (csi camera 성능상 최대 30Hz 지원)   
