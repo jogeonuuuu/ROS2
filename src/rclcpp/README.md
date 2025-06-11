@@ -31,7 +31,7 @@
 
 <br/>
 
-### **rclcpp-2** ``rclcpp::Node::create_wall_timer()``
+### **rclcpp-2** ``rclcpp::Node::create_wall_timer(), spin()``
 <img src="https://github.com/user-attachments/assets/d3780af5-8842-4cb9-8aa5-d3459860ef8a" width="50%" height="50%">
 <img src="https://github.com/user-attachments/assets/8a4948e7-f954-43bc-ae01-741eba9d558e" width="50%" height="50%">
 
