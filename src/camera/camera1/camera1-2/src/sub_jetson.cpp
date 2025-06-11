@@ -10,7 +10,7 @@ using std::placeholders::_1;
 std::string dst = "appsrc ! videoconvert ! video/x-raw, format=BGRx ! \
 	nvvidconv ! nvv4l2h264enc insert-sps-pps=true ! \
 	h264parse ! rtph264pay pt=96 ! \
-	udpsink host = 203.234.58.162 port = 9011 sync=false";
+	udpsink host = 203.234.xx.xxx port = xxxx sync=false";
 
 cv::VideoWriter writer;
         
@@ -23,7 +23,7 @@ void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::Compre
   
     writer << binary;
     output << frame;
-    RCLCPP_INFO(node->get_logger(), "Received Image : %s,%d,%d", msg->format.c_str(),frame.rows,frame.cols);
+    RCLCPP_INFO(node->get_logger(), "Received Image : %s,%d,%d", msg->format.c_str(), frame.rows, frame.cols);
 }
 
 int main(int argc, char* argv[])
