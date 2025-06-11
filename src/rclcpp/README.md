@@ -26,6 +26,9 @@
      rclcpp::sleep_for(chrono::nanoseconds(1s)); //rclcpp::WallRate(loop_rate(), loop_rate.sleep())을 하나로 묶은 개념.
    }
    ```
+
+<br/>
+
 ### **rclcpp-2** ``rclcpp::Node::create_wall_timer()``
 <img src="https://github.com/user-attachments/assets/d3780af5-8842-4cb9-8aa5-d3459860ef8a" width="50%" height="50%">
 <img src="https://github.com/user-attachments/assets/8a4948e7-f954-43bc-ae01-741eba9d558e" width="50%" height="50%">
@@ -47,6 +50,8 @@
    rclcpp::spin(node); //"node"가 가리키는 노드의 실행을 무한히 반복.
                        
    ```
+
+<br/>
 
 ### **rclcpp-3**
 <img src="https://github.com/user-attachments/assets/92d33fcf-35e2-4313-b90e-0a82260a8b45" width="50%" height="50%">
