@@ -6,6 +6,8 @@
   - **Node name:** campub
   - **Topic name:** image/compressed
   - **Interface(topic message):** sensor_msgs::msg::CompressedImage
+    - ``cv_bridge::CvImage::toCompressedImageMsg()``   
+      -> cv::Mat 객체를 sensor_msgs::msg::CompressedImage 객체로 변환시켜주는 함수
   - **프로토콜:** UDP (영상 통신시 속도가 중요하므로 Qos설정에서 best effort 모드(UDP) 사용)
   - **반복 주기**
     - 40Hz (csi camera 성능상 최대 30Hz 지원)   
@@ -14,6 +16,8 @@
   - **Node name:** camsub
   - **Topic name:** image/compressed
   - **Interface(topic message):** sensor_msgs::msg::CompressedImage
+    - ``cv_bridge::toCvShare()``   
+      -> sensor_msgs::msg::CompressedImage 객체를 cv::Mat 객체로 변환시켜주는 함수
   - **프로토콜:** UDP (영상 통신시 속도가 중요하므로 Qos설정에서 best effort 모드(UDP) 사용)
   - **반복 주기**
     - ``spin()``함수를 통해``node``가 가리키는 <ins>노드(camsub)의 실행</ins>을 무한히 반복.
