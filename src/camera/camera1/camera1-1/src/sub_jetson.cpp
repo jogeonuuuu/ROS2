@@ -33,10 +33,12 @@ int main(int argc, char* argv[])
     //cv::VideoWriter writer;
     writer.open(dst, 0, (double)30, cv::Size(640, 360), false);
     if(!writer.isOpened()) { RCLCPP_ERROR(node->get_logger(), "Writer open failed!"); rclcpp::shutdown(); return -1; }
+
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
     fn = std::bind(mysub_callback, node, _1); //, writer
-    auto mysub = node->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed",qos_profile,fn);
+    auto mysub = node->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed", qos_profile, fn);
+
     rclcpp::spin(node);
     rclcpp::shutdown();
     return 0;
