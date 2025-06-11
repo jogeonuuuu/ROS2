@@ -49,7 +49,7 @@
                                                                                      //타이머 이벤트 주기와 콜백함수가 등록된 shared_ptr(SharedPtr) 객체
                                                                                      //TimerBase인 이유: ?
                                                                                      //std::shared_ptr<X> = X:SharedPtr
-   rclcpp::spin(node); #"node"가 가리키는 노드의 실행을 무한히 반복.
+   rclcpp::spin(node); //"node"가 가리키는 노드의 실행을 무한히 반복.
    ```
 
 <br/>
