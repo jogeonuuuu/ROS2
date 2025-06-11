@@ -50,7 +50,6 @@
                                                                                      //TimerBase인 이유: ?
                                                                                      //std::shared_ptr<X> = X:SharedPtr
    rclcpp::spin(node); //"node"가 가리키는 노드의 실행을 무한히 반복.
-                       
    ```
 
 <br/>
