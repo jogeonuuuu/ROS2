@@ -2,6 +2,12 @@
 
 ### 수신한 영상을 동영상 파일(.mp4)로 저장하는 패키지 (실행시 저장을 시작하고 ctrl+c를 누르면 저장을 종료)
 
+|코덱명|fourCC 코드|컨테이너|
+|:---:|:---:|:---:|
+|MP4V|mp4v|.mp4|
+|Motion-JPG|mjpg|.mp4|
+|DivX MPEG-4|divx|.avi, .mkv, .mp4|
+
 <br/>
 
 - **Publisher Node**
@@ -24,11 +30,3 @@
   - **반복 주기**
     - ``spin()``함수를 통해``node``가 가리키는 <ins>노드(camsub)의 실행</ins>을 무한히 반복.
     - **노드(camsub)의 실행:** Publisher Node에서 전송하는 Topic인 ``image/compressed``를 수신했을 때 호출되는 콜백함수(``mysub_callback``)
-
-</br></br>
-
-|코덱명|fourCC 코드|컨테이너|
-|:---:|:---:|:---:|
-|MP4V|mp4v|.mp4|
-|Motion-JPG|mjpg|.mp4|
-|DivX MPEG-4|divx|.avi, .mkv, .mp4|
