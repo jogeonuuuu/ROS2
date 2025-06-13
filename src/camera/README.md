@@ -1,4 +1,4 @@
-## [camera1 개발 환경] <br/> · ``Jetson nano board``: Ubuntu20.04 (with ROS2 Foxy ver.)
+## [camera1 개발 환경] <br/> ``Jetson nano board``: Ubuntu20.04 (with ROS2 Foxy ver.)
 > - [**camera1-1**](https://github.com/jogeonuuuu/ROS2/tree/main/src/camera/camera1/camera1-1)   
 > 수신한 영상을 컬러영상 -> 그레이영상 -> 이진영상으로 변환하고 이진영상을 PC로 전송하여 출력하는 패키지
 > - [**camera1-2**](https://github.com/jogeonuuuu/ROS2/tree/main/src/camera/camera1/camera1-2)   
