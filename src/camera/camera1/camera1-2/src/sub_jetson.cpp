@@ -17,11 +17,8 @@ cv::VideoWriter writer;
 void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg, cv::VideoWriter& output) //, cv::VideoWriter& writer
 {
     cv::Mat frame = cv::imdecode(cv::Mat(msg->data),  cv::IMREAD_COLOR);
-    cv::Mat gray, binary, binary_bgr;
-    cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
-    cv::threshold(gray, binary, 0, 255, cv::THRESH_BINARY | cv::THRESH_OTSU);
   
-    writer << binary;
+    writer << frame;
     output << frame;
     RCLCPP_INFO(node->get_logger(), "Received Image : %s,%d,%d", msg->format.c_str(), frame.rows, frame.cols);
 }
