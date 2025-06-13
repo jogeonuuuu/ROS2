@@ -18,22 +18,22 @@ include_directories(include)
 include_directories(/usr/local/include/dynamixel_sdk)
 
 # Build
-add_executable(pub_self src/pub_self.cpp src/dxl.cpp)
-ament_target_dependencies(pub_self rclcpp geometry_msgs)
-target_link_libraries(pub_self dxl_x64_cpp)
+add_executable(pub_manual src/pub_manual.cpp src/dxl.cpp)
+ament_target_dependencies(pub_manual rclcpp geometry_msgs)
+target_link_libraries(pub_manual dxl_x64_cpp)
 
-add_executable(sub_self src/sub_self.cpp src/dxl.cpp)
-ament_target_dependencies(sub_self rclcpp geometry_msgs)
-target_link_libraries(sub_self dxl_x64_cpp)
+add_executable(sub_manual src/sub_manual.cpp src/dxl.cpp)
+ament_target_dependencies(sub_manual rclcpp geometry_msgs)
+target_link_libraries(sub_manual dxl_x64_cpp)
 
-add_executable(sub src/sub.cpp src/dxl.cpp)
-ament_target_dependencies(sub rclcpp std_msgs)
-target_link_libraries(sub dxl_x64_cpp)
+add_executable(sub_auto src/sub_auto.cpp src/dxl.cpp)
+ament_target_dependencies(sub_auto rclcpp std_msgs)
+target_link_libraries(sub_auto dxl_x64_cpp)
 
 install(TARGETS
-  pub_self
-  sub_self
-  sub
+  pub_manual
+  sub_manual
+  sub_auto
   DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
