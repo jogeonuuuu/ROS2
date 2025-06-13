@@ -1,4 +1,4 @@
-## 개발 환경: Jetson nano board: Ubuntu20.04 (with ROS2 Foxy ver.)
+## [개발 환경] <br/> ``Jetson nano board``: Ubuntu20.04 (with ROS2 Foxy ver.)
 
 ### 수신한 영상을 컬러영상 -> 그레이영상 -> 이진영상으로 변환하고 이진영상을 PC로 전송하여 출력하는 패키지
 
