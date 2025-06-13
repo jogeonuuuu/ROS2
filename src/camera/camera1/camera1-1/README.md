@@ -2,6 +2,8 @@
 
 ### 수신한 영상을 컬러영상 -> 그레이영상 -> 이진영상으로 변환하고 이진영상을 PC로 전송하여 출력하는 패키지
 
+<br/>
+
 - **Publisher Node**
   - **Node name:** campub
   - **Topic name:** image/compressed
