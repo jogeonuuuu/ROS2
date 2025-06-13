@@ -21,12 +21,12 @@ int main(int argc, char* argv[])
     rclcpp::init(argc, argv);
  
     auto node = std::make_shared<rclcpp::Node>("camsub");
-    auto qos = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
  
     int fourcc = cv::VideoWriter::fourcc('m', 'p', '4', 'v'); //'D', 'I', 'V', 'X'
     double fps = 30;
     cv::VideoWriter outputVideo("camera2-2.mp4", fourcc, fps, cv::Size(640, 360));
  
+    auto qos = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
     fn = std::bind(mysub_callback, node, _1, outputVideo);
  
