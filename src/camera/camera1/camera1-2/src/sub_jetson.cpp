@@ -36,12 +36,13 @@ int main(int argc, char* argv[])
     double fps = 30;
     cv::VideoWriter outputVideo("camera1-2.avi", fourcc, fps, cv::Size(640, 360)); //mp4, avi
 
+    auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
     fn = std::bind(mysub_callback, node, _1, outputVideo); //, writer
 
-    auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
     auto mysub = node->create_subscription<sensor_msgs::msg::CompressedImage>("image/compressed", qos_profile, fn);
     rclcpp::spin(node);
+
     rclcpp::shutdown();
     return 0;
 }
