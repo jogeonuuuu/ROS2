@@ -10,9 +10,9 @@
 int main(int argc, char * argv[])
 {
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<rclcpp::Node>("node_dxlpub");
+    auto node = std::make_shared<rclcpp::Node>("dxl_pub");
     auto qos_profile = rclcpp::QoS(rclcpp::KeepLast(10));
-    auto mypub = node->create_publisher<geometry_msgs::msg::Vector3>("topic_dxlpub", qos_profile);
+    auto mypub = node->create_publisher<geometry_msgs::msg::Vector3>("msg_value", qos_profile);
     geometry_msgs::msg::Vector3 vel;
     vel.x = vel.y = vel.z = 0;
     
