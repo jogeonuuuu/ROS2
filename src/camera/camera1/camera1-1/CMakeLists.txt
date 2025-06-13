@@ -20,13 +20,13 @@ find_package(OpenCV REQUIRED)
 # build
 add_executable(pub src/pub.cpp)
 ament_target_dependencies(pub rclcpp sensor_msgs cv_bridge OpenCV)
-add_executable(sub_jetson src/sub_jetson.cpp)
-ament_target_dependencies(sub_jetson rclcpp sensor_msgs OpenCV)
+add_executable(sub src/sub.cpp)
+ament_target_dependencies(sub rclcpp sensor_msgs OpenCV)
 
 # Install
 install(TARGETS
   pub
-  sub_jetson
+  sub
   DESTINATION lib/${PROJECT_NAME})
  
 ament_package()
