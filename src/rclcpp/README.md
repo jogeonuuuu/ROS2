@@ -1,4 +1,4 @@
-## 개발 환경: WSL2: Ubuntu20.04 (with ROS2 Foxy ver.)
+## [개발 환경] <br/> ``WSL2``: Ubuntu20.04 (with ROS2 Foxy ver.)
 
 <br/>
 
