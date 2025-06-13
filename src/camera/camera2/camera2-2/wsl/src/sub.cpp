@@ -6,8 +6,7 @@
 #include <iostream>
 using std::placeholders::_1; //새로운 함수(fn)의 첫번째 인자
   
-void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg, 
-                                                                                cv::VideoWriter& output)
+void mysub_callback(rclcpp::Node::SharedPtr node, const sensor_msgs::msg::CompressedImage::SharedPtr msg, cv::VideoWriter& output)
 {
     //압축된 이미지를 cv::Mat 형식으로 디코딩
     cv::Mat frame = cv::imdecode(cv::Mat(msg->data), cv::IMREAD_COLOR);
@@ -26,8 +25,7 @@ int main(int argc, char* argv[])
  
     int fourcc = cv::VideoWriter::fourcc('m', 'p', '4', 'v'); //'D', 'I', 'V', 'X'
     double fps = 30;
-    // cv::VideoWriter outputVideo("camera2-2.mp4", fourcc, fps, cv::Size(640, 360));
-    cv::VideoWriter outputVideo("dxl-2.mp4", fourcc, fps, cv::Size(640, 360));
+    cv::VideoWriter outputVideo("camera2-2.mp4", fourcc, fps, cv::Size(640, 360));
  
     std::function<void(const sensor_msgs::msg::CompressedImage::SharedPtr msg)> fn;
     fn = std::bind(mysub_callback, node, _1, outputVideo);
