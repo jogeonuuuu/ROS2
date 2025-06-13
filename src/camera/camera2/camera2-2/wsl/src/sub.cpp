@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 {
     rclcpp::init(argc, argv);
  
-    auto node = std::make_shared<rclcpp::Node>("camsub_wsl");
+    auto node = std::make_shared<rclcpp::Node>("camsub");
     auto qos = rclcpp::QoS(rclcpp::KeepLast(10)).best_effort();
  
     int fourcc = cv::VideoWriter::fourcc('m', 'p', '4', 'v'); //'D', 'I', 'V', 'X'
