@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
     rclcpp::init(argc, argv);
 
     auto node = std::make_shared<rclcpp::Node>("camsub");
+	
     //cv::VideoWriter writer;
     writer.open(dst, 0, (double)30, cv::Size(640, 360), false);
     if(!writer.isOpened()) { RCLCPP_ERROR(node->get_logger(), "Writer open failed!"); rclcpp::shutdown(); return -1; }
