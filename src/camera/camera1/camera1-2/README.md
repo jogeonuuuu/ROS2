@@ -1,4 +1,4 @@
-## 개발 환경: Jetson nano board: Ubuntu20.04 (with ROS2 Foxy ver.)
+## [개발 환경] <br/> ``Jetson nano board``: Ubuntu20.04 (with ROS2 Foxy ver.)
 
 ### 수신한 영상을 동영상 파일(.mp4)로 저장하는 패키지 (실행시 저장을 시작하고 ctrl+c를 누르면 저장을 종료)
 
