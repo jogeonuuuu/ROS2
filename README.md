@@ -20,8 +20,12 @@ $ colcon --help
 ### ~/.bashrc 파일 편집
 [참고 사이트](https://cafe.naver.com/openrt/25288)
 
-
-
+```
+source /opt/ros/foxy/setup.bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/
+colcon build --symlink-install
+```
 
 ```
 source /opt/ros/humble/setup.bash # ROS2 Humble 환경 설정
@@ -33,7 +37,7 @@ source /usr/share/vcstool-completion/vcs.bash
 source /usr/share/colcon_cd/function/colcon_cd.sh
 
 # 환경변수 설정
-export _colcon_cd_root=~/robot_ws # colcon 작업 공간의 루트 디렉터리를 설정
+export _colcon_cd_root=~/ros2_ws # colcon 작업 공간의 루트 디렉터리를 설정
 export ROS_DOMAIN_ID=7 # jetson보드의 ROS 네트워크의 도메인 ID 설정. (ROS 시스템 간의 통신 격리에 사용) ($ echo $ROS_DOMAIN_ID)
 export ROS_NAMESPACE=robot1 # 기본 ROS 네임스페이스 설정
 
