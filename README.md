@@ -19,6 +19,7 @@ $ colcon --help
 </br></br>
 
 ### ~/.bashrc 파일 편집
+[참고 사이트](https://cafe.naver.com/openrt/25288)
 ```
 source /opt/ros/humble/setup.bash
 source ~/ros2_ws/install/local_setup.bash
