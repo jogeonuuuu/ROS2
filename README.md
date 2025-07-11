@@ -7,6 +7,15 @@ $ wsl --install -d Ubuntu-20.04
 </br></br>
 
 ### [foxy install](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)   
+```
+$ sudo apt update && sudo apt upgrade
+
+# desktop / base 선택
+$ sudo apt install ros-foxy-desktop python3-argcomplete
+
+# ROS 패키지를 빌드하기 위해 필요한 tools install
+$ sudo apt install ros-dev-tools
+```
 설치 후 아래 명령어 실행 후 도움말이 나오는지 확인.
 ```
 $ source /opt/ros/humble/setup.bash
