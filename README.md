@@ -5,7 +5,7 @@
 wsl --install -d Ubuntu-20.04
 
 </br></br>
-
+[foxy install](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
 설치 후 아래 명령어 실행 후 도움말이 나오는지 확인.
 ```
 $ source /opt/ros/humble/setup.bash
