@@ -8,13 +8,21 @@ $ wsl --install -d Ubuntu-20.04
 
 ### [foxy install](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)   
 ```
-$ sudo apt update && sudo apt upgrade
+# Setup Sources
+sudo apt install software-properties-common
+sudo add-apt-repository universe
 
-# desktop / base 선택
-$ sudo apt install ros-foxy-desktop python3-argcomplete
+sudo apt update && sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
-# ROS 패키지를 빌드하기 위해 필요한 tools install
-$ sudo apt install ros-dev-tools
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# Install ROS 2 packages
+sudo apt update && sudo apt upgrade
+
+sudo apt install ros-foxy-desktop python3-argcomplete
+
+sudo apt install ros-dev-tools
 ```
 설치 후 아래 명령어 실행 후 도움말이 나오는지 확인.
 ```
