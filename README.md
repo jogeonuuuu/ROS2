@@ -57,7 +57,10 @@ alias cbp='colcon build --symlink-install --packages-select'
 ```
 
 </br></br>
-## Anaconda Error
+## Error
+1. 방화벽
+2. DOMAIN_ID
+3. build -> Anaconda deactivate   
 ```
 which python3   
 sudo apt update   
