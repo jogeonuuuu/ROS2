@@ -55,3 +55,7 @@ export RCUTILS_LOGGING_BUFFERED_STREAM=1
  
 alias cbp='colcon build --symlink-install --packages-select'
 ```
+
+</br></br>
+## Anaconda Error
+colcon build --symlink-install --packages-select dxl_wsl --cmake-args -DPYTHON_EXECUTABLE=/usr/bin/python3
