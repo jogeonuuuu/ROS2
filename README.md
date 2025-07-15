@@ -58,4 +58,7 @@ alias cbp='colcon build --symlink-install --packages-select'
 
 </br></br>
 ## Anaconda Error
+which python3
+sudo apt update
+sudo apt install python3-catkin-pkg
 colcon build --symlink-install --packages-select dxl_wsl --cmake-args -DPYTHON_EXECUTABLE=/usr/bin/python3
